@@ -1,0 +1,2018 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    background: #f5f5f5;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 96%;
+    max-width: 1450px;
+    margin: auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #f5f5f5;
+}
+
+/* =========================
+   TOP HEADER
+========================= */
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 30px;
+    padding-bottom: 24px;
+}
+
+/* =========================
+   BRAND
+========================= */
+
+.brand-area {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo-image {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.brand-text h1 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 4.2rem;
+
+    line-height: 0.95;
+
+    font-weight: 600;
+
+    color: #efaaa5;
+}
+
+.brand-text p {
+    margin-top: 10px;
+
+    font-size: 1.1rem;
+
+    color: #333;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.contact-btn {
+    background: #efaaa5;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 20px 46px;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    opacity: 0.9;
+}
+
+/* =========================
+   NAV
+========================= */
+
+.nav-container {
+    border-top: 1px solid #cfcfcf;
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+/* =========================
+   MENU
+========================= */
+
+nav ul {
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+
+    gap: 28px;
+}
+/* ========================================
+   DROPDOWN MENU
+======================================== */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0;
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    min-width: 240px;
+
+    background: #f5f5f5;
+
+    list-style: none;
+
+    padding: 14px 0;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition: all 0.25s ease;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+    z-index: 999;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 12px 24px;
+
+    white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-menu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+/* MOBILE ONLY LINKS */
+
+.mobile-only {
+    display: none;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: #666;
+
+    font-size: 0.92rem;
+
+    font-weight: 300;
+
+    letter-spacing: 0.15px;
+
+    line-height: 1;
+
+    transition: color 0.3s ease;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav a:hover {
+    color: #efaaa5;
+}
+
+/* =========================
+   HEADER RIGHT
+========================= */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.email {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.social {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section {
+    display: grid;
+
+    grid-template-columns: 50% 50%;
+
+    align-items: center;
+
+    min-height: 860px;
+
+    padding-top: 40px;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-left {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 720px;
+
+    height: 760px;
+
+    object-fit: cover;
+}
+
+/* =========================
+   HERO RIGHT
+========================= */
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 700px;
+}
+
+/* =========================
+   HERO TITLE
+========================= */
+
+.hero-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 7.5rem;
+
+    line-height: 0.92;
+
+    font-weight: 600;
+
+    color: #efaaa5;
+
+    text-align: center;
+}
+
+/* =========================
+   HERO TAGLINE
+========================= */
+
+.hero-content p {
+    margin-top: 48px;
+
+    text-align: center;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 2rem;
+
+    font-style: italic;
+
+    font-weight: 600;
+
+    color: #222;
+}
+
+/* =========================
+   CELEBRATE SECTION
+========================= */
+
+.celebrate-section {
+    padding: 120px 20px;
+
+    text-align: center;
+}
+
+.celebrate-content {
+    max-width: 900px;
+}
+
+.celebrate-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 5rem;
+
+    color: #efaaa5;
+
+    margin-bottom: 40px;
+}
+
+.celebrate-content p {
+    font-size: 1.15rem;
+
+    line-height: 2;
+
+    margin-bottom: 20px;
+}
+
+/* =========================
+   SPLIT SECTION
+========================= */
+
+.split-section {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+}
+
+.reverse {
+    direction: rtl;
+}
+
+.reverse .split-text,
+.reverse .split-image {
+    direction: ltr;
+}
+
+/* IMAGE */
+
+.split-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* TEXT */
+
+.split-text {
+    background: #efaaa5;
+
+    color: white;
+
+    padding: 90px 70px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.split-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 4rem;
+
+    color: white;
+
+    margin-bottom: 40px;
+}
+
+.split-text p {
+    font-size: 1.1rem;
+
+    line-height: 2;
+
+    margin-bottom: 24px;
+}
+
+/* =========================
+   FINAL SECTION
+========================= */
+
+.final-section {
+    padding-top: 70px;
+    padding-bottom: 40px;
+
+    text-align: center;
+}
+
+.final-content {
+    max-width: 980px;
+}
+
+.final-content p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1.05rem;
+
+    font-weight: 600;
+
+    line-height: 1.7;
+
+    color: #333;
+
+    margin-bottom: 6px;
+}
+
+/* BUTTON */
+
+.final-section .contact-btn {
+    display: inline-block;
+
+    margin-top: 45px;
+
+    padding: 18px 40px;
+
+    font-size: 0.95rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 10px;
+}
+
+/* MAIN FOOTER */
+
+.footer-main {
+    text-align: center;
+
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+/* FOOTER TITLE */
+
+.footer-main h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    color: #efaaa5;
+
+    font-size: 2.2rem;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+}
+
+/* FOOTER EMAIL */
+
+.footer-main p {
+    font-size: 0.95rem;
+
+    margin-bottom: 24px;
+
+    color: #333;
+}
+
+/* SOCIALS */
+
+.footer-socials {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 16px;
+
+    font-size: 1.2rem;
+}
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+    background: #d9d9d9;
+
+    text-align: center;
+
+    padding: 10px;
+
+    font-size: 0.75rem;
+
+    color: #555;
+}
+
+/* ========================================
+   ABOUT PAIGE PAGE
+======================================== */
+
+.about-main-section {
+    display: grid;
+
+    grid-template-columns: 50% 50%;
+
+    align-items: start;
+
+    padding-top: 35px;
+
+    max-width: 1700px;
+
+    margin: auto;
+}
+
+/* LEFT IMAGE */
+
+.about-main-image img {
+    width: 100%;
+
+    height: 1400px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* RIGHT CONTENT */
+
+.about-main-content {
+    padding-top: 120px;
+    padding-left: 55px;
+    padding-right: 70px;
+}
+
+/* NAME */
+
+.about-main-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 5rem;
+
+    line-height: 1;
+
+    color: #efaaa5;
+
+    margin-bottom: 45px;
+}
+
+/* SUBTITLE */
+
+.about-main-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 2rem;
+
+    line-height: 1.4;
+
+    color: #333;
+
+    margin-bottom: 55px;
+}
+
+/* PARAGRAPHS */
+
+.about-main-content p {
+    font-size: 1.08rem;
+
+    line-height: 2;
+
+    margin-bottom: 34px;
+
+    color: #333;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 1200px) {
+
+    .hero-content h2 {
+        font-size: 5.5rem;
+    }
+
+    .brand-text h1 {
+        font-size: 3rem;
+    }
+
+    .about-main-content h2 {
+        font-size: 4rem;
+    }
+
+    .about-main-content h3 {
+        font-size: 1.6rem;
+    }
+
+    .about-main-image img {
+        height: 1200px;
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width: 768px) {
+
+    .top-header {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .brand-area {
+    margin-bottom: 10px;
+}
+
+    .header-right {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-section {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        gap: 40px;
+
+        padding-bottom: 80px;
+    }
+
+    .hero-image {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .hero-content h2 {
+        font-size: 4.5rem;
+    }
+
+    .split-section {
+        grid-template-columns: 1fr;
+    }
+
+    .split-text {
+        padding: 60px 35px;
+    }
+
+    .split-text h2 {
+        font-size: 3rem;
+    }
+
+    .about-main-section {
+        grid-template-columns: 1fr;
+    }
+
+    .about-main-image img {
+        height: auto;
+    }
+
+    .about-main-content {
+        padding: 60px 35px;
+    }
+
+    .about-main-content h2 {
+        font-size: 3.5rem;
+    }
+
+    .about-main-content h3 {
+        font-size: 1.4rem;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 600px) {
+
+    .brand-area {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .brand-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .brand-text p {
+        font-size: 1rem;
+    }
+
+    .contact-btn {
+        padding: 16px 30px;
+    }
+
+    .hero-content h2 {
+        font-size: 3.3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+    }
+
+    .celebrate-content h2 {
+        font-size: 3.2rem;
+    }
+
+    .split-text h2 {
+        font-size: 2.8rem;
+    }
+
+    .split-text {
+        padding: 50px 30px;
+    }
+
+    .split-text p {
+        line-height: 1.8;
+    }
+
+    .final-section {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    .final-content p {
+        font-size: 0.95rem;
+
+        line-height: 1.6;
+    }
+
+    .footer-main h3 {
+        font-size: 1.8rem;
+    }
+
+    .footer-main p {
+        font-size: 0.9rem;
+    }
+
+    .footer-socials {
+        font-size: 1rem;
+    }
+
+    .about-main-content {
+        padding: 45px 24px;
+    }
+
+    .about-main-content h2 {
+        font-size: 2.7rem;
+
+        margin-bottom: 28px;
+    }
+
+    .about-main-content h3 {
+        font-size: 1.2rem;
+
+        margin-bottom: 32px;
+    }
+
+    .about-main-content p {
+        font-size: 1rem;
+
+        line-height: 1.8;
+
+        margin-bottom: 24px;
+    }
+}
+
+/* ========================================
+   WEDDINGS PAGE
+======================================== */
+
+/* HERO */
+
+.weddings-hero {
+    height: 760px;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.18),
+            rgba(0,0,0,0.18)
+        ),
+        url("../images/event-services/two-asian-women.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+/* HERO CONTENT */
+
+.weddings-hero-content {
+    max-width: 1200px;
+
+    padding: 20px;
+}
+
+.weddings-hero-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 6.5rem;
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    color: white;
+
+    margin-bottom: 28px;
+}
+
+.weddings-hero-content p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1.7rem;
+
+    font-weight: 600;
+
+    line-height: 1.8;
+
+    color: white;
+}
+
+/* ========================================
+   CEREMONY GRID
+======================================== */
+
+.ceremony-grid-section {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* COLUMN */
+
+.ceremony-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* IMAGE CARD */
+
+.ceremony-image-card {
+    position: relative;
+}
+
+.ceremony-image-card img {
+    width: 100%;
+
+    height: 520px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* OVERLAY */
+
+.ceremony-image-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: rgba(0,0,0,0.15);
+}
+
+.ceremony-image-overlay h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 3.4rem;
+
+    line-height: 1.1;
+
+    color: white;
+
+    font-weight: 600;
+}
+
+/* TEXT CARD */
+
+.ceremony-text-card {
+    background: #ededed;
+
+    padding: 70px 50px;
+
+    text-align: center;
+
+    flex-grow: 1;
+}
+
+.ceremony-text-card p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1.45rem;
+
+    line-height: 1.9;
+
+    font-weight: 600;
+
+    color: #444;
+
+    margin-bottom: 26px;
+}
+
+/* ========================================
+   FINAL SECTION
+======================================== */
+
+.weddings-final-section {
+    padding-top: 120px;
+    padding-bottom: 100px;
+
+    text-align: center;
+}
+
+.weddings-final-content {
+    max-width: 1200px;
+}
+
+.weddings-final-content p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1.6rem;
+
+    line-height: 2;
+
+    font-weight: 600;
+
+    color: #444;
+
+    margin-bottom: 60px;
+}
+
+/* ========================================
+   WEDDINGS RESPONSIVE
+======================================== */
+
+@media(max-width: 1200px) {
+
+    .weddings-hero-content h2 {
+        font-size: 5rem;
+    }
+
+    .ceremony-image-overlay h3 {
+        font-size: 2.8rem;
+    }
+
+    .ceremony-text-card p {
+        font-size: 1.2rem;
+    }
+}
+
+/* TABLET */
+
+@media(max-width: 900px) {
+
+    .ceremony-grid-section {
+        grid-template-columns: 1fr;
+    }
+
+    .ceremony-image-card img {
+        height: 420px;
+    }
+
+    .ceremony-text-card {
+        padding: 50px 35px;
+    }
+
+    .weddings-hero {
+        height: 620px;
+    }
+
+    .weddings-hero-content h2 {
+        font-size: 4rem;
+    }
+
+    .weddings-hero-content p {
+        font-size: 1.4rem;
+    }
+}
+
+/* MOBILE */
+
+@media(max-width: 600px) {
+
+    .weddings-hero {
+        height: 500px;
+    }
+
+    .weddings-hero-content h2 {
+        font-size: 2.8rem;
+    }
+
+    .weddings-hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .ceremony-image-overlay h3 {
+        font-size: 2.3rem;
+    }
+
+    .ceremony-text-card p {
+        font-size: 1.05rem;
+    }
+
+    .weddings-final-content p {
+        font-size: 1.15rem;
+    }
+}
+
+/* ========================================
+   GALLERY PAGE
+======================================== */
+
+.gallery-hero {
+    padding-top: 80px;
+    padding-bottom: 50px;
+
+    text-align: center;
+}
+
+.gallery-hero-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 5.5rem;
+
+    color: #efaaa5;
+
+    margin-bottom: 18px;
+}
+
+.gallery-hero-content p {
+    font-size: 1.15rem;
+
+    color: #555;
+}
+
+/* GRID */
+
+.gallery-section {
+    padding-bottom: 80px;
+}
+
+.gallery-grid {
+    column-count: 4;
+    column-gap: 16px;
+
+    width: 96%;
+    max-width: 1600px;
+
+    margin: auto;
+}
+
+.gallery-item {
+    break-inside: avoid;
+
+    margin-bottom: 16px;
+
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.02);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 1200px) {
+
+    .gallery-grid {
+        column-count: 3;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .gallery-grid {
+        column-count: 2;
+    }
+
+    .gallery-hero-content h2 {
+        font-size: 4rem;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .gallery-grid {
+        column-count: 1;
+    }
+
+    .gallery-hero {
+        padding-top: 50px;
+    }
+
+    .gallery-hero-content h2 {
+        font-size: 3rem;
+    }
+}
+/* ========================================
+   CONTACT PAGE
+======================================== */
+
+.contact-page-section {
+    display: grid;
+
+    grid-template-columns: 50% 50%;
+
+    align-items: start;
+
+    padding-top: 40px;
+
+    max-width: 1700px;
+
+    margin: auto;
+}
+
+/* LEFT IMAGE */
+
+.contact-image img {
+    width: 100%;
+
+    height: 1400px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* RIGHT SIDE */
+
+.contact-form-wrapper {
+    padding-top: 160px;
+
+    padding-left: 60px;
+
+    padding-right: 90px;
+}
+
+/* TITLE */
+
+.contact-form-wrapper h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 5rem;
+
+    line-height: 1;
+
+    color: #efaaa5;
+
+    margin-bottom: 50px;
+}
+
+/* FORM */
+
+.contact-form {
+    width: 100%;
+}
+
+/* GROUP */
+
+.form-group {
+    margin-bottom: 28px;
+}
+
+/* LABEL */
+
+.form-group label {
+    display: block;
+
+    font-size: 1rem;
+
+    color: #666;
+
+    margin-bottom: 8px;
+}
+
+/* INPUTS */
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 18px;
+
+    border: 1px solid #bdbdbd;
+
+    background: transparent;
+
+    font-size: 1rem;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* TEXTAREA */
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* CHECKBOXES */
+
+.checkbox-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.checkbox-group label {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    font-size: 1rem;
+
+    line-height: 1.4;
+
+    color: #666;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+
+    height: 18px;
+
+    margin-top: 3px;
+
+    flex-shrink: 0;
+}
+
+/* BUTTON */
+
+.submit-btn {
+    border: none;
+
+    cursor: pointer;
+
+    margin-top: 15px;
+
+    width: 180px;
+}
+
+/* ========================================
+   CONTACT RESPONSIVE
+======================================== */
+
+@media(max-width: 1000px) {
+
+    .contact-page-section {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-image img {
+        height: auto;
+    }
+
+    .contact-form-wrapper {
+        padding: 60px 35px;
+    }
+
+    .contact-form-wrapper h2 {
+        font-size: 3.8rem;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .contact-form-wrapper {
+        padding: 45px 24px;
+    }
+
+    .contact-form-wrapper h2 {
+        font-size: 2.8rem;
+    }
+}
+/* ========================================
+   TESTIMONIAL PAGE
+======================================== */
+
+.testimonial-banner img {
+    width: 100%;
+
+    height: 260px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* MAIN SECTION */
+
+.testimonial-section {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    max-width: 1600px;
+
+    margin: 120px auto 40px;
+
+    padding: 0 80px;
+}
+
+/* SLIDER */
+
+.testimonial-slider {
+    width: 100%;
+}
+
+/* EACH SLIDE */
+
+.testimonial-slide {
+    display: none;
+
+    grid-template-columns: 48% 52%;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+.testimonial-slide.active {
+    display: grid;
+}
+
+/* IMAGE */
+
+.testimonial-image img {
+    width: 100%;
+
+    max-width: 650px;
+
+    height: 700px;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin: auto;
+}
+
+/* TEXT */
+
+.testimonial-content {
+    text-align: center;
+
+    padding-right: 40px;
+}
+
+.testimonial-content p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 2.1rem;
+
+    line-height: 1.7;
+
+    color: #4b4b4b;
+
+    margin-bottom: 50px;
+}
+
+.testimonial-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 3rem;
+
+    font-weight: 700;
+
+    color: #444;
+}
+
+/* ARROWS */
+
+.testimonial-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: transparent;
+
+    border: none;
+
+    font-size: 5rem;
+
+    color: #666;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: 0.3s;
+}
+
+.testimonial-arrow:hover {
+    color: #efaaa5;
+}
+
+.testimonial-arrow.left {
+    left: 0;
+}
+
+.testimonial-arrow.right {
+    right: 0;
+}
+
+/* DOTS */
+
+.testimonial-dots {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 120px;
+}
+
+.dot {
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #555;
+
+    opacity: 0.4;
+
+    transition: 0.3s;
+}
+
+.dot.active {
+    opacity: 1;
+
+    background: #555;
+
+    transform: scale(1.25);
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media(max-width: 1200px) {
+
+    .testimonial-slide {
+        gap: 50px;
+    }
+
+    .testimonial-content p {
+        font-size: 1.8rem;
+    }
+
+    .testimonial-content h3 {
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width: 1000px) {
+
+    .testimonial-section {
+        padding: 0 30px;
+    }
+
+    .testimonial-slide {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .testimonial-content {
+        padding-right: 0;
+    }
+
+    .testimonial-image img {
+        height: auto;
+
+        max-width: 100%;
+    }
+
+    .testimonial-content p {
+        font-size: 1.5rem;
+    }
+
+    .testimonial-content h3 {
+        font-size: 2.2rem;
+    }
+
+    .testimonial-arrow {
+        font-size: 3.5rem;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .testimonial-section {
+        margin-top: 70px;
+    }
+
+    .testimonial-content p {
+        font-size: 1.25rem;
+
+        line-height: 1.6;
+    }
+
+    .testimonial-content h3 {
+        font-size: 1.9rem;
+    }
+
+    .testimonial-arrow {
+        font-size: 2.8rem;
+    }
+
+    .testimonial-dots {
+        gap: 8px;
+    }
+
+    .dot {
+        width: 8px;
+
+        height: 8px;
+    }
+}
+/* ========================================
+   MOBILE HAMBURGER MENU
+======================================== */
+
+.hamburger {
+    display: none;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    cursor: pointer;
+
+    padding: 10px;
+}
+
+.hamburger span {
+    width: 30px;
+
+    height: 3px;
+
+    background: #444;
+
+    transition: 0.3s;
+}
+
+/* ========================================
+   MOBILE NAVIGATION
+======================================== */
+
+@media(max-width: 768px) {
+
+    /* TOP HEADER */
+
+    .top-header {
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+
+    /* NAV BAR */
+
+.nav-inner {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: flex-start;
+
+    min-height: 40px;
+}
+
+    /* HAMBURGER SHOWS */
+
+.hamburger {
+
+    display: flex;
+
+    position: absolute;
+
+    top: -138px;
+
+    right: 0;
+
+    z-index: 2000;
+}
+
+    /* HIDE EMAIL + SOCIALS */
+
+    .header-right {
+        display: none;
+    }
+
+    /* MOBILE NAV */
+
+    .main-nav {
+        position: absolute;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: #f5f5f5;
+
+        border-top: 1px solid #ddd;
+
+        display: none;
+
+        z-index: 999;
+
+        padding-top: 25px;
+
+        padding-bottom: 25px;
+    }
+
+    /* OPEN MENU */
+
+    .main-nav.active {
+        display: block;
+    }
+
+    /* STACK LINKS */
+
+    .main-nav ul {
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 22px;
+    }
+
+    /* LINKS */
+
+    .main-nav a {
+        font-size: 1.1rem;
+    }
+
+    /* PREVENT WRAPPING */
+
+    nav ul {
+        flex-wrap: nowrap;
+    }
+
+        /* MOBILE DROPDOWN */
+
+
+    .desktop-dropdown {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+}
+/* =========================
+   HUMANIST CEREMONIES PAGE
+========================= */
+
+.humanist-section {
+    padding: 70px 0;
+    background: #f8f8f8;
+}
+
+.humanist-container {
+    width: 92%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    gap: 70px;
+    align-items: flex-start;
+}
+
+.humanist-left {
+    width: 38%;
+}
+
+.humanist-right {
+    width: 62%;
+}
+
+.humanist-right img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.humanist-left h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    line-height: 1.05;
+    font-weight: 400;
+    color: #e7a29b;
+    margin-bottom: 20px;
+}
+
+.humanist-source {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    margin-bottom: 50px;
+    color: #444;
+}
+
+.fact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    margin-bottom: 42px;
+}
+
+.fact-star {
+    color: #f2a9a2;
+    font-size: 38px;
+    line-height: 1;
+    margin-top: -6px;
+    flex-shrink: 0;
+}
+
+.fact-item p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #333;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .humanist-container {
+        flex-direction: column;
+    }
+
+    .humanist-left,
+    .humanist-right {
+        width: 100%;
+    }
+
+    .humanist-left h2 {
+        font-size: 48px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .humanist-section {
+        padding: 40px 0;
+    }
+
+    .humanist-left h2 {
+        font-size: 38px;
+    }
+
+    .fact-item {
+        gap: 16px;
+        margin-bottom: 30px;
+    }
+
+    .fact-star {
+        font-size: 28px;
+    }
+
+    .fact-item p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+}
+
+/* ========================================
+   FAQ PAGE
+======================================== */
+
+.faq-title-section {
+    text-align: center;
+
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.faq-title-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 3.8rem;
+
+    font-weight: 500;
+
+    color: #efaaa5;
+}
+
+/* GRID */
+
+.faq-grid-section {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+}
+
+/* IMAGES */
+
+.faq-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* TEXT BOX */
+
+.faq-text-box {
+    background: #eca19d;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 80px;
+}
+
+/* CONTENT */
+
+.faq-content {
+    max-width: 420px;
+}
+
+.faq-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 2.3rem;
+
+    color: white;
+
+    margin-bottom: 28px;
+}
+
+.faq-content p {
+    font-size: 1rem;
+
+    line-height: 2;
+
+    color: white;
+
+    margin-bottom: 22px;
+}
+
+/* LINK */
+
+.faq-link {
+    color: white;
+
+    text-decoration: underline;
+
+    font-size: 1rem;
+}
+
+/* CTA */
+
+.faq-cta-section {
+    text-align: center;
+
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+/* ========================================
+   FAQ RESPONSIVE
+======================================== */
+
+@media(max-width: 900px) {
+
+    .faq-grid-section {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-text-box {
+        padding: 60px 35px;
+    }
+
+    .faq-title-section h2 {
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .faq-title-section {
+        padding-top: 45px;
+        padding-bottom: 30px;
+    }
+
+    .faq-title-section h2 {
+        font-size: 2.3rem;
+    }
+
+    .faq-content h3 {
+        font-size: 1.9rem;
+    }
+
+    .faq-content p {
+        font-size: 0.95rem;
+
+        line-height: 1.8;
+    }
+
+}
