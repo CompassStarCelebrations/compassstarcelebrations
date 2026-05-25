@@ -1361,10 +1361,11 @@ footer {
 }
 
 .gallery-grid {
-    display: block;
-    column-count: 4;
-    column-gap: 8px;
-    column-fill: balance;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: 8px;
+    grid-auto-flow: row;
+    gap: 8px;
 
     width: 100%;
     max-width: none;
@@ -1373,11 +1374,10 @@ footer {
 }
 
 .gallery-item {
-    display: inline-block;
+    display: block;
     position: relative;
     overflow: hidden;
-    break-inside: avoid;
-    margin: 0 0 8px;
+    margin: 0;
 }
 
 .gallery-item img {
@@ -1434,15 +1434,15 @@ footer {
 
 @media(max-width: 1024px) {
     .gallery-grid {
-        column-count: 3;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
 @media(max-width: 900px) {
 
     .gallery-grid {
-        column-count: 2;
-        column-gap: 8px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
     }
 
     .gallery-hero-content h2 {
@@ -1453,8 +1453,9 @@ footer {
 @media(max-width: 640px) {
 
     .gallery-grid {
-        column-count: 1;
-        column-gap: 0;
+        grid-template-columns: 1fr;
+        gap: 6px;
+        grid-auto-rows: auto;
     }
 
     .gallery-hover-caption {

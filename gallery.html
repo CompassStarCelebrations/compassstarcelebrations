@@ -15,10 +15,10 @@
 
     <link
         rel="stylesheet"
-        href="css/styles.css?v=7">
+        href="css/styles.css?v=8">
 
     <!-- GOOGLE FONTS -->
-
+        href="css/styles.css?v=9">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
@@ -94,6 +94,70 @@
             <div class="container nav-inner">
 
                 <!-- NAVIGATION -->
+
+    (function applyGalleryMasonry() {
+        const grid = document.querySelector('.gallery-grid');
+        if (!grid) return;
+
+        const items = Array.from(grid.querySelectorAll('.gallery-item'));
+        if (items.length === 0) return;
+
+        const updateItemSpan = (item) => {
+            const img = item.querySelector('img');
+            if (!img) return;
+
+            const styles = window.getComputedStyle(grid);
+            const rowHeight = parseFloat(styles.getPropertyValue('grid-auto-rows')) || 8;
+            const rowGap = parseFloat(styles.getPropertyValue('row-gap')) || 0;
+
+            if (rowHeight <= 0) {
+                item.style.gridRowEnd = '';
+                return;
+            }
+
+                if (!img.naturalWidth || !img.naturalHeight) {
+                    item.style.gridRowEnd = '';
+                    return;
+                }
+
+                const itemWidth = item.getBoundingClientRect().width;
+                const contentHeight = itemWidth * (img.naturalHeight / img.naturalWidth);
+            const span = Math.max(1, Math.ceil((contentHeight + rowGap) / (rowHeight + rowGap)));
+            item.style.gridRowEnd = `span ${span}`;
+        };
+
+        const refreshAll = () => {
+            const isMobile = window.matchMedia('(max-width: 640px)').matches;
+            items.forEach((item) => {
+                if (isMobile) {
+                    item.style.gridRowEnd = '';
+                    return;
+                }
+                updateItemSpan(item);
+            });
+        };
+
+        let rafHandle = 0;
+        const scheduleRefresh = () => {
+            if (rafHandle) cancelAnimationFrame(rafHandle);
+            rafHandle = requestAnimationFrame(refreshAll);
+        };
+
+        items.forEach((item) => {
+            const img = item.querySelector('img');
+            if (!img) return;
+            if (img.complete) {
+                updateItemSpan(item);
+            } else {
+                img.addEventListener('load', scheduleRefresh, { once: true });
+            }
+        });
+
+        window.addEventListener('resize', scheduleRefresh);
+        window.addEventListener('orientationchange', scheduleRefresh);
+            window.addEventListener('load', scheduleRefresh);
+        scheduleRefresh();
+    })();
 
                 <nav class="main-nav">
 
@@ -218,7 +282,6 @@
     <section class="gallery-section">
 
         <div class="gallery-grid">
-
             <div class="gallery-item"><img src="images/gallery/gallery-01.png" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-02.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-03.jpg" alt=""></div>
@@ -226,7 +289,6 @@
             <div class="gallery-item"><img src="images/gallery/gallery-05.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-06.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-07.jpg" alt=""></div>
-            <div class="gallery-item"><img src="images/gallery/gallery-08.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-09.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-10.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-11.jpg" alt=""></div>
@@ -234,14 +296,15 @@
             <div class="gallery-item"><img src="images/gallery/gallery-13.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-14.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-15.png" alt=""></div>
-            <div class="gallery-item"><img src="images/gallery/gallery-16.jpg" alt=""></div>
-            <div class="gallery-item"><img src="images/gallery/gallery-17.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-18.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-19.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-20.png" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-21.jpg" alt=""></div>
-            <div class="gallery-item"><img src="images/gallery/gallery-22.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-23.jpg" alt=""></div>
+            <div class="gallery-item"><img src="images/gallery/gallery-08.jpg" alt=""></div>
+            <div class="gallery-item"><img src="images/gallery/gallery-16.jpg" alt=""></div>
+            <div class="gallery-item"><img src="images/gallery/gallery-17.jpg" alt=""></div>
+            <div class="gallery-item"><img src="images/gallery/gallery-22.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-24.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-25.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-26.jpg" alt=""></div>
@@ -258,6 +321,45 @@
             <div class="gallery-item"><img src="images/gallery/gallery-37.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-38.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-39.jpg" alt=""></div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
 
         </div>
 
@@ -340,7 +442,6 @@
                 { title: "Sharing Reagan & Dakota's Journey", byline: "Photo by Michael Salvatori" },
                 { title: "Compass Star Celebrations", byline: "" },
                 { title: "Sharing Samantha & Samuel's Journey", byline: "Photo by Kaitlin Black Photography" },
-                { title: "I love the love!", byline: "" },
                 { title: "Sharing Allia and John's Journey", byline: "Photo by Paige Bennett" },
                 { title: "Sharing Reagan & Dakota's Journey", byline: "Photo by Michael Salvatori" },
                 { title: "Sharing Maria and Justin's Journey", byline: "Photo by Mario Mule" },
@@ -348,14 +449,15 @@
                 { title: "Paletta Mansion with Buck!", byline: "Photo by Paige Bennett" },
                 { title: "So much love!", byline: "" },
                 { title: "Compass Star Celebrations", byline: "" },
-                { title: "Sharing Laura & Michael's Journey", byline: "Photo by Karis Burkowski" },
-                { title: "Welcoming a new little one to the family", byline: "" },
                 { title: "Sharing Allia and John's Journey", byline: "" },
                 { title: "Sharing Sharla & Steve's Journey", byline: "Photo by Mike Streeter Photography" },
                 { title: "Candle Lighting at Samantha & Samuel's Wedding", byline: "Photo by Kaitlin Black Photography" },
                 { title: "Loved ones joining from afar", byline: "Photo by Kaitlin Black Photography" },
-                { title: "Welcome to a beautiful wedding!", byline: "Photo by Karis Burkowski" },
                 { title: "Three Feathers Terrace - such a beautiful setting", byline: "Photo by Paige Bennett" },
+                { title: "I love the love!", byline: "" },
+                { title: "Sharing Laura & Michael's Journey", byline: "Photo by Karis Burkowski" },
+                { title: "Welcoming a new little one to the family", byline: "" },
+                { title: "Welcome to a beautiful wedding!", byline: "Photo by Karis Burkowski" },
                 { title: "The documents are ready to sign", byline: "Photo by Jane Bennett" },
                 { title: "Exchanging rings - so much love", byline: "Photo by Kaitlin Black Photography" },
                 { title: "King Valley Golf Club, King City", byline: "Photo by Paige Bennett" },
@@ -395,6 +497,65 @@
 
                 item.appendChild(overlay);
             });
+        })();
+
+        (function applyGalleryMasonry() {
+            const grid = document.querySelector('.gallery-grid');
+            if (!grid) return;
+
+            const items = Array.from(grid.querySelectorAll('.gallery-item'));
+            if (items.length === 0) return;
+
+            const updateItemSpan = (item) => {
+                const img = item.querySelector('img');
+                if (!img) return;
+
+                const styles = window.getComputedStyle(grid);
+                const rowHeight = parseFloat(styles.getPropertyValue('grid-auto-rows')) || 8;
+                const rowGap = parseFloat(styles.getPropertyValue('row-gap')) || 0;
+
+                if (rowHeight <= 0 || !img.naturalWidth || !img.naturalHeight) {
+                    item.style.gridRowEnd = '';
+                    return;
+                }
+
+                const itemWidth = item.getBoundingClientRect().width;
+                const contentHeight = itemWidth * (img.naturalHeight / img.naturalWidth);
+                const span = Math.max(1, Math.ceil((contentHeight + rowGap) / (rowHeight + rowGap)));
+                item.style.gridRowEnd = `span ${span}`;
+            };
+
+            const refreshAll = () => {
+                const isMobile = window.matchMedia('(max-width: 640px)').matches;
+                items.forEach((item) => {
+                    if (isMobile) {
+                        item.style.gridRowEnd = '';
+                    } else {
+                        updateItemSpan(item);
+                    }
+                });
+            };
+
+            let rafHandle = 0;
+            const scheduleRefresh = () => {
+                if (rafHandle) cancelAnimationFrame(rafHandle);
+                rafHandle = requestAnimationFrame(refreshAll);
+            };
+
+            items.forEach((item) => {
+                const img = item.querySelector('img');
+                if (!img) return;
+                if (img.complete && img.naturalWidth > 0) {
+                    updateItemSpan(item);
+                } else {
+                    img.addEventListener('load', scheduleRefresh, { once: true });
+                }
+            });
+
+            window.addEventListener('load', scheduleRefresh);
+            window.addEventListener('resize', scheduleRefresh);
+            window.addEventListener('orientationchange', scheduleRefresh);
+            scheduleRefresh();
         })();
 
     </script>
