@@ -1031,17 +1031,21 @@ footer {
 /* HERO CONTENT */
 
 .weddings-hero-content {
-    max-width: 1500px;
+    max-width: 940px;
+
+    width: 100%;
 
     padding: 20px;
+
+    transform: translateY(-72px);
 }
 
 .weddings-hero-content h2 {
-    font-size: 2.2rem;
+    font-size: 50px;
 
-    font-weight: 600;
+    font-weight: 400;
 
-    line-height: 1.08;
+    line-height: 67px;
 
     color: white;
 
@@ -1049,11 +1053,13 @@ footer {
 }
 
 .weddings-hero-content p {
-    font-size: 0.9rem;
+    font-size: 18px;
 
-    font-weight: 600;
+    font-weight: 400;
 
-    line-height: 1.45;
+    line-height: 31.5px;
+
+    font-style: italic;
 
     color: white;
 }
@@ -1063,16 +1069,19 @@ footer {
 ======================================== */
 
 .ceremony-grid-section {
-    display: grid;
+    display: flex;
 
-    grid-template-columns: repeat(3, 1fr);
+    flex-direction: column;
 }
 
-/* COLUMN */
+/* ROW */
 
-.ceremony-column {
-    display: flex;
-    flex-direction: column;
+.ceremony-row {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    align-items: stretch;
 }
 
 /* IMAGE CARD */
@@ -1084,7 +1093,7 @@ footer {
 .ceremony-image-card img {
     width: 100%;
 
-    height: 560px;
+    height: 100%;
 
     object-fit: cover;
 
@@ -1093,23 +1102,7 @@ footer {
 
 /* OVERLAY */
 
-.ceremony-image-overlay {
-    position: absolute;
 
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    background: rgba(0,0,0,0.15);
-}
 
 .ceremony-image-overlay h3 {
     font-size: 3.4rem;
@@ -1126,23 +1119,70 @@ footer {
 .ceremony-text-card {
     background: var(--color-card);
 
-    padding: 70px 50px;
+    padding: 40px 48px;
 
-    text-align: center;
+    text-align: left;
 
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ceremony-row:nth-child(3) .ceremony-text-card {
+    padding-top: 38px;
+    padding-bottom: 38px;
+}
+
+.ceremony-row:nth-child(3) .ceremony-image-card img {
+    height: 537px;
 }
 
 .ceremony-text-card p {
-    font-size: 0.98rem;
+    font-size: 1.03rem;
 
-    line-height: 1.85;
+    line-height: 1.7;
 
     font-weight: 400;
 
     color: var(--color-text-medium);
 
-    margin-bottom: 26px;
+    margin-bottom: 16px;
+}
+
+.ceremony-card-title {
+    font-size: 3rem;
+
+    line-height: 1.08;
+
+    font-weight: 600;
+
+    color: var(--color-text-medium);
+
+    margin-bottom: 24px;
+}
+
+.ceremony-highlight {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    line-height: 1.12;
+    font-weight: 600;
+    color: var(--color-text-medium);
+    margin: 6px 0;
+}
+
+.ceremony-includes-list {
+    list-style: disc;
+    margin: 0 0 16px 24px;
+    padding: 0;
+}
+
+.ceremony-includes-list li {
+    font-family: var(--font-display);
+    font-size: 1.03rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: var(--color-text-medium);
+    margin-bottom: 4px;
 }
 
 /* ========================================
@@ -1160,15 +1200,18 @@ footer {
 }
 
 .weddings-final-content p {
-    font-size: 3.3rem;
-    line-height: 1.1;
-    line-height: 2;
+    font-size: 2rem;
+    line-height: 1.4;
 
     font-weight: 600;
 
     color: var(--color-text-medium);
 
-    margin-bottom: 60px;
+    margin-bottom: 18px;
+}
+
+.weddings-final-content p:last-of-type {
+    margin-bottom: 56px;
 }
 
 /* ========================================
@@ -1194,12 +1237,16 @@ footer {
 
 @media(max-width: 900px) {
 
-    .ceremony-grid-section {
+    .ceremony-row {
         grid-template-columns: 1fr;
     }
 
     .ceremony-image-card img {
         height: 420px;
+    }
+
+    .ceremony-image-card {
+        min-height: 420px;
     }
 
     .ceremony-text-card {
@@ -1243,6 +1290,14 @@ footer {
         font-size: 1.05rem;
     }
 
+    .ceremony-highlight {
+        font-size: 2rem;
+    }
+
+    .ceremony-includes-list li {
+        font-size: 1.05rem;
+    }
+
     .weddings-final-content p {
         font-size: 1.15rem;
     }
@@ -1275,24 +1330,23 @@ footer {
 /* GRID */
 
 .gallery-section {
-    padding-bottom: 80px;
+    margin-top: -6px;
+    padding-bottom: 40px;
 }
 
 .gallery-grid {
-    column-count: 5;
-    column-gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
 
-    width: 96%;
-    max-width: 1600px;
+    width: 100%;
+    max-width: none;
 
-    margin: auto;
+    margin: 0;
 }
 
 .gallery-item {
-    break-inside: avoid;
-
-    margin-bottom: 16px;
-
+    position: relative;
     overflow: hidden;
 }
 
@@ -1300,27 +1354,56 @@ footer {
     width: 100%;
 
     display: block;
-
-    transition: transform 0.4s ease;
 }
 
-.gallery-item img:hover {
-    transform: scale(1.02);
+.gallery-hover-caption {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(248,248,248,0.74);
+    color: #464646;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+
+.gallery-hover-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 2vw, 2rem);
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.gallery-hover-byline {
+    font-family: var(--font-body);
+    font-size: clamp(0.9rem, 1.35vw, 1.8rem);
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+.gallery-item:hover .gallery-hover-caption {
+    opacity: 1;
 }
 
 /* RESPONSIVE */
 
 @media(max-width: 1200px) {
-
     .gallery-grid {
-        column-count: 4;
+        gap: 10px;
     }
 }
 
 @media(max-width: 768px) {
 
     .gallery-grid {
-        column-count: 2;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
     }
 
     .gallery-hero-content h2 {
@@ -1331,7 +1414,12 @@ footer {
 @media(max-width: 600px) {
 
     .gallery-grid {
-        column-count: 1;
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .gallery-hover-caption {
+        display: none;
     }
 
     .gallery-hero {
@@ -1349,7 +1437,7 @@ footer {
 .contact-page-section {
     display: grid;
 
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 48% 52%;
 
     align-items: start;
 
@@ -1375,15 +1463,15 @@ footer {
 /* RIGHT SIDE */
 
 .contact-form-wrapper {
-    padding: 120px 90px 0 60px;
+    padding: 120px 48px 0 40px;
 }
 
 /* TITLE */
 
 .contact-form-wrapper h2 {
-    font-size: 4.5rem;
+    font-size: 3.25rem;
 
-    line-height: 1;
+    line-height: 1.05;
 
     color: var(--color-brand);
 
@@ -1521,14 +1609,31 @@ footer {
    TESTIMONIAL PAGE
 ======================================== */
 
+.testimonial-banner {
+    position: relative;
+}
+
 .testimonial-banner img {
     width: 100%;
 
-    height: 280px;
+    height: 520px;
 
     object-fit: cover;
 
     display: block;
+}
+
+.testimonial-banner h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4.2rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
 }
 
 /* MAIN SECTION */
@@ -1544,9 +1649,9 @@ footer {
 
     max-width: 1600px;
 
-    margin: 80px auto 40px;
+    margin: 70px auto 26px;
 
-    padding: 0 80px;
+    padding: 0 74px;
 }
 
 /* SLIDER */
@@ -1576,9 +1681,9 @@ footer {
 .testimonial-image img {
     width: 100%;
 
-    max-width: 560px;
+    max-width: 460px;
 
-    height: 620px;
+    height: 520px;
 
     object-fit: cover;
 
@@ -1596,21 +1701,25 @@ footer {
 }
 
 .testimonial-content p {
-    font-size: 1.3rem;
+    font-size: 1.08rem;
 
-    line-height: 1.8;
+    line-height: 1.6;
 
     color: #4b4b4b;
 
-    margin-bottom: 28px;
+    margin: 0 0 28px;
 }
 
 .testimonial-content h3 {
-    font-size: 2.1rem;
+    font-size: 2rem;
 
     font-weight: 700;
 
+    line-height: 1;
+
     color: var(--color-text-medium);
+
+    margin: 0;
 }
 
 /* ARROWS */
@@ -1626,9 +1735,13 @@ footer {
 
     border: none;
 
-    font-size: 3.5rem;
+    font-size: 2.2rem;
 
-    color: var(--color-text-muted);
+    font-weight: 300;
+
+    line-height: 1;
+
+    color: #646464;
 
     cursor: pointer;
 
@@ -1642,11 +1755,11 @@ footer {
 }
 
 .testimonial-arrow.left {
-    left: 0;
+    left: 74px;
 }
 
 .testimonial-arrow.right {
-    right: 0;
+    right: 74px;
 }
 
 /* DOTS */
@@ -1658,21 +1771,21 @@ footer {
 
     align-items: center;
 
-    gap: 12px;
+    gap: 14px;
 
-    margin-bottom: 120px;
+    margin-bottom: 14px;
 }
 
 .dot {
-    width: 10px;
+    width: 9px;
 
-    height: 10px;
+    height: 9px;
 
     border-radius: 50%;
 
-    background: var(--color-text-soft);
+    background: #5f5f5f;
 
-    opacity: 0.4;
+    opacity: 0.8;
 
     transition: 0.3s;
 }
@@ -1680,9 +1793,11 @@ footer {
 .dot.active {
     opacity: 1;
 
-    background: var(--color-text-soft);
+    background: transparent;
 
-    transform: scale(1.25);
+    border: 2px solid #5f5f5f;
+
+    transform: none;
 }
 
 /* ========================================
@@ -1696,11 +1811,11 @@ footer {
     }
 
     .testimonial-content p {
-        font-size: 1.8rem;
+        font-size: 1.08rem;
     }
 
     .testimonial-content h3 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 }
 
@@ -1741,8 +1856,16 @@ footer {
 
 @media(max-width: 600px) {
 
+    .testimonial-banner img {
+        height: 300px;
+    }
+
+    .testimonial-banner h2 {
+        font-size: 2.8rem;
+    }
+
     .testimonial-section {
-        margin-top: 70px;
+        margin-top: 35px;
     }
 
     .testimonial-content p {
@@ -1801,7 +1924,7 @@ footer {
    MOBILE NAVIGATION
 ======================================== */
 
-@media(max-width: 768px) {
+@media(max-width: 900px) {
 
     /* TOP HEADER */
 
@@ -1934,16 +2057,16 @@ footer {
     max-width: 1600px;
     margin: 0 auto;
     display: flex;
-    gap: 70px;
+    gap: 0;
     align-items: flex-start;
 }
 
 .humanist-left {
-    width: 42%;
+    width: 46%;
 }
 
 .humanist-right {
-    width: 58%;
+    width: 54%;
 }
 
 .humanist-right img {
@@ -1953,15 +2076,20 @@ footer {
 }
 
 .humanist-left h2 {
-    font-size: 64px;
-    line-height: 1.05;
+    font-size: 50px;
+    line-height: 67px;
     font-weight: 400;
     color: var(--color-brand-dark);
     margin-bottom: 20px;
 }
 
 .humanist-source {
-    font-size: 15px;
+    font-family: var(--font-display);
+
+    font-size: 20px;
+
+    line-height: 33.4px;
+
     margin-bottom: 50px;
     color: var(--color-text-medium);
 }
@@ -1982,8 +2110,12 @@ footer {
 }
 
 .fact-item p {
-    font-size: 15px;
-    line-height: 1.9;
+    font-family: var(--font-display);
+
+    font-size: 18px;
+
+    line-height: 31.5px;
+
     color: var(--color-text);
 }
 
@@ -2110,6 +2242,22 @@ footer {
     margin-bottom: 22px;
 }
 
+.faq-content ul {
+    margin: 0 0 22px 24px;
+
+    padding: 0;
+
+    color: white;
+}
+
+.faq-content li {
+    font-size: 1rem;
+
+    line-height: 2;
+
+    margin-bottom: 8px;
+}
+
 /* LINK */
 
 .faq-link {
@@ -2162,6 +2310,12 @@ footer {
     }
 
     .faq-content p {
+        font-size: 0.95rem;
+
+        line-height: 1.8;
+    }
+
+    .faq-content li {
         font-size: 0.95rem;
 
         line-height: 1.8;
