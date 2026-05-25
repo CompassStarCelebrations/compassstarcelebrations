@@ -1361,8 +1361,10 @@ footer {
 }
 
 .gallery-grid {
+    display: block;
     column-count: 4;
     column-gap: 8px;
+    column-fill: balance;
 
     width: 100%;
     max-width: none;
@@ -1371,6 +1373,7 @@ footer {
 }
 
 .gallery-item {
+    display: inline-block;
     position: relative;
     overflow: hidden;
     break-inside: avoid;
@@ -1435,7 +1438,7 @@ footer {
     }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 900px) {
 
     .gallery-grid {
         column-count: 2;
@@ -1447,7 +1450,7 @@ footer {
     }
 }
 
-@media(max-width: 600px) {
+@media(max-width: 640px) {
 
     .gallery-grid {
         column-count: 1;
