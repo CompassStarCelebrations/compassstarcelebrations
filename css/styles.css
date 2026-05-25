@@ -1041,6 +1041,8 @@ footer {
 }
 
 .weddings-hero-content h2 {
+    font-family: 'Playfair Display', serif;
+
     font-size: 50px;
 
     font-weight: 400;
@@ -1053,6 +1055,8 @@ footer {
 }
 
 .weddings-hero-content p {
+    font-family: 'Playfair Display', serif;
+
     font-size: 18px;
 
     font-weight: 400;
@@ -1119,7 +1123,7 @@ footer {
 .ceremony-text-card {
     background: var(--color-card);
 
-    padding: 40px 48px;
+    padding: 40px 30px;
 
     text-align: left;
 
@@ -1138,9 +1142,11 @@ footer {
 }
 
 .ceremony-text-card p {
-    font-size: 1.03rem;
+    font-family: 'Playfair Display', serif;
 
-    line-height: 1.7;
+    font-size: 16px;
+
+    line-height: 28px;
 
     font-weight: 400;
 
@@ -1149,12 +1155,26 @@ footer {
     margin-bottom: 16px;
 }
 
-.ceremony-card-title {
-    font-size: 3rem;
+.ceremony-text-card p.ceremony-body {
+    font-size: 18px;
 
-    line-height: 1.08;
+    line-height: 31.5px;
+}
 
+.ceremony-text-card p strong {
     font-weight: 600;
+}
+
+.ceremony-card-title {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 22px;
+
+    line-height: 31.02px;
+
+    font-weight: 400;
+
+    text-align: center;
 
     color: var(--color-text-medium);
 
@@ -1172,14 +1192,16 @@ footer {
 
 .ceremony-includes-list {
     list-style: disc;
-    margin: 0 0 16px 24px;
-    padding: 0;
+    margin: 0 0 16px 8px;
+    padding: 0 0 0 20px;
+
+    list-style-position: outside;
 }
 
 .ceremony-includes-list li {
-    font-family: var(--font-display);
-    font-size: 1.03rem;
-    line-height: 1.7;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    line-height: 28px;
     font-weight: 400;
     color: var(--color-text-medium);
     margin-bottom: 4px;
@@ -1200,6 +1222,8 @@ footer {
 }
 
 .weddings-final-content p {
+    font-family: 'Playfair Display', serif;
+
     font-size: 2rem;
     line-height: 1.4;
 
@@ -1229,7 +1253,9 @@ footer {
     }
 
     .ceremony-text-card p {
-        font-size: 1.2rem;
+        font-size: 16px;
+
+        line-height: 28px;
     }
 }
 
@@ -1358,7 +1384,12 @@ footer {
 
 .gallery-hover-caption {
     position: absolute;
-    inset: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1388,6 +1419,10 @@ footer {
 }
 
 .gallery-item:hover .gallery-hover-caption {
+    opacity: 1;
+}
+
+.gallery-item:focus-within .gallery-hover-caption {
     opacity: 1;
 }
 
