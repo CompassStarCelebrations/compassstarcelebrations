@@ -340,11 +340,11 @@ nav a:hover {
 
     grid-template-columns: 50% 50%;
 
-    align-items: center;
+    align-items: start;
 
-    min-height: 860px;
+    min-height: 820px;
 
-    padding-top: 40px;
+    padding-top: 0;
 }
 
 /* =========================
@@ -358,9 +358,9 @@ nav a:hover {
 
 .hero-image {
     width: 100%;
-    max-width: 720px;
+    max-width: 490px;
 
-    height: 760px;
+    height: 820px;
 
     object-fit: cover;
 }
@@ -377,7 +377,7 @@ nav a:hover {
 
 .hero-content {
     width: 100%;
-    max-width: 700px;
+    max-width: 460px;
 }
 
 /* =========================
@@ -385,11 +385,11 @@ nav a:hover {
 ========================= */
 
 .hero-content h2 {
-    font-size: 7.5rem;
+    font-size: 72px;
 
-    line-height: 0.92;
+    line-height: 90px;
 
-    font-weight: 600;
+    font-weight: 400;
 
     color: var(--color-brand);
 
@@ -811,7 +811,7 @@ footer {
 @media(max-width: 1200px) {
 
     .hero-content h2 {
-        font-size: 5.5rem;
+        font-size: 4.5rem;
     }
 
     .brand-text h1 {
