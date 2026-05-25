@@ -1093,7 +1093,7 @@ footer {
 
 .ceremony-image-card {
     position: relative;
-    height: 430px;
+    min-height: 400px;
 }
 
 .ceremony-image-card img {
@@ -1103,8 +1103,11 @@ footer {
     min-height: 0;
 
     object-fit: cover;
+    object-position: center top;
 
     display: block;
+    position: absolute;
+    inset: 0;
 }
 
 /* OVERLAY */
@@ -1128,11 +1131,11 @@ footer {
 
     padding: 24px 22px;
 
-    text-align: center;
+    text-align: left;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
 }
 
@@ -1157,7 +1160,6 @@ footer {
     color: var(--color-text-medium);
 
     margin-bottom: 10px;
-    max-width: 560px;
 }
 
 .ceremony-text-card p.ceremony-body {
@@ -1179,7 +1181,7 @@ footer {
 
     font-weight: 400;
 
-    text-align: center;
+    text-align: left;
 
     color: var(--color-text-medium);
 
@@ -1197,11 +1199,11 @@ footer {
 
 .ceremony-includes-list {
     list-style: disc;
-    margin: 0 auto 10px;
+    margin: 0 0 10px 20px;
     padding: 0;
 
-    list-style-position: inside;
-    text-align: center;
+    list-style-position: outside;
+    text-align: left;
 }
 
 .ceremony-includes-list li {
@@ -1211,7 +1213,7 @@ footer {
     font-weight: 400;
     color: var(--color-text-medium);
     margin-bottom: 2px;
-    text-align: center;
+    text-align: left;
 }
 
 /* ========================================
