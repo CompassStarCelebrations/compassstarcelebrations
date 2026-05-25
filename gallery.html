@@ -15,10 +15,9 @@
 
     <link
         rel="stylesheet"
-        href="css/styles.css?v=8">
+        href="css/styles.css?v=9">
 
     <!-- GOOGLE FONTS -->
-        href="css/styles.css?v=9">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
@@ -94,70 +93,6 @@
             <div class="container nav-inner">
 
                 <!-- NAVIGATION -->
-
-    (function applyGalleryMasonry() {
-        const grid = document.querySelector('.gallery-grid');
-        if (!grid) return;
-
-        const items = Array.from(grid.querySelectorAll('.gallery-item'));
-        if (items.length === 0) return;
-
-        const updateItemSpan = (item) => {
-            const img = item.querySelector('img');
-            if (!img) return;
-
-            const styles = window.getComputedStyle(grid);
-            const rowHeight = parseFloat(styles.getPropertyValue('grid-auto-rows')) || 8;
-            const rowGap = parseFloat(styles.getPropertyValue('row-gap')) || 0;
-
-            if (rowHeight <= 0) {
-                item.style.gridRowEnd = '';
-                return;
-            }
-
-                if (!img.naturalWidth || !img.naturalHeight) {
-                    item.style.gridRowEnd = '';
-                    return;
-                }
-
-                const itemWidth = item.getBoundingClientRect().width;
-                const contentHeight = itemWidth * (img.naturalHeight / img.naturalWidth);
-            const span = Math.max(1, Math.ceil((contentHeight + rowGap) / (rowHeight + rowGap)));
-            item.style.gridRowEnd = `span ${span}`;
-        };
-
-        const refreshAll = () => {
-            const isMobile = window.matchMedia('(max-width: 640px)').matches;
-            items.forEach((item) => {
-                if (isMobile) {
-                    item.style.gridRowEnd = '';
-                    return;
-                }
-                updateItemSpan(item);
-            });
-        };
-
-        let rafHandle = 0;
-        const scheduleRefresh = () => {
-            if (rafHandle) cancelAnimationFrame(rafHandle);
-            rafHandle = requestAnimationFrame(refreshAll);
-        };
-
-        items.forEach((item) => {
-            const img = item.querySelector('img');
-            if (!img) return;
-            if (img.complete) {
-                updateItemSpan(item);
-            } else {
-                img.addEventListener('load', scheduleRefresh, { once: true });
-            }
-        });
-
-        window.addEventListener('resize', scheduleRefresh);
-        window.addEventListener('orientationchange', scheduleRefresh);
-            window.addEventListener('load', scheduleRefresh);
-        scheduleRefresh();
-    })();
 
                 <nav class="main-nav">
 
@@ -321,44 +256,6 @@
             <div class="gallery-item"><img src="images/gallery/gallery-37.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-38.jpg" alt=""></div>
             <div class="gallery-item"><img src="images/gallery/gallery-39.jpg" alt=""></div>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
 
         </div>
@@ -563,7 +460,4 @@
 </body>
 
 </html>
-
-
-
 
