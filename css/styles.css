@@ -1751,7 +1751,7 @@ footer {
 .testimonial-content {
     text-align: center;
 
-    padding-right: 40px;
+    padding-right: 110px;
 }
 
 .testimonial-content p {
@@ -1862,6 +1862,10 @@ footer {
 
     .testimonial-slide {
         gap: 50px;
+    }
+
+    .testimonial-content {
+        padding-right: 80px;
     }
 
     .testimonial-content p {
