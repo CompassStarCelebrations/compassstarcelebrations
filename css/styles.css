@@ -1102,8 +1102,8 @@ footer {
     height: 100%;
     min-height: 0;
 
-    object-fit: cover;
-    object-position: center top;
+    object-fit: contain;
+    object-position: center center;
 
     display: block;
     position: absolute;
@@ -1129,7 +1129,7 @@ footer {
 .ceremony-text-card {
     background: var(--color-card);
 
-    padding: 24px 22px;
+    padding: 40px 60px;
 
     text-align: left;
 
@@ -1140,8 +1140,8 @@ footer {
 }
 
 .ceremony-row:nth-child(3) .ceremony-text-card {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .ceremony-row:nth-child(3) .ceremony-image-card img {
@@ -2292,22 +2292,23 @@ footer {
 
     display: flex;
 
-    justify-content: flex-end;
+    justify-content: center;
 
-    align-items: flex-start;
+    align-items: center;
 
-    padding: 10px 30px 16px 42px;
+    padding: 24px 40px;
 }
 
 .faq-grid-section > .faq-text-box:nth-child(3) {
-    justify-content: flex-start;
-    padding: 10px 42px 16px 30px;
+    justify-content: center;
+    padding: 24px 40px;
 }
 
 /* CONTENT */
 
 .faq-content {
     max-width: 270px;
+    text-align: left;
 }
 
 .faq-content h3 {
