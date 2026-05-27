@@ -1,3 +1,11 @@
+.weddings-final-content .weddings-final-medium {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 14px;
+    color: var(--color-text-medium);
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
 /* =========================
    RESET
 ========================= */
@@ -768,20 +776,29 @@ footer {
 
     padding-top: 35px;
 
-    max-width: 1700px;
+    width: 96%;
+
+    max-width: 1450px;
 
     margin: auto;
 }
 
 /* LEFT IMAGE */
 
+.about-main-image {
+    display: flex;
+    justify-content: flex-start;
+}
+
 .about-main-image img {
-    width: 100%;
+    width: 90%;
+
+    max-width: 860px;
 
     height: auto;
 
     object-fit: contain;
-    object-position: center top;
+    object-position: left top;
 
     display: block;
 }
@@ -851,6 +868,10 @@ footer {
     }
 
     .about-main-image img {
+        width: 100%;
+
+        max-width: none;
+
         height: auto;
     }
 }
@@ -1067,9 +1088,9 @@ footer {
 }
 
 .weddings-hero-content h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-display);
 
-    font-size: 44px;
+    font-size: 46px;
 
     font-weight: 400;
 
@@ -1080,14 +1101,22 @@ footer {
     margin-bottom: 18px;
 }
 
-.weddings-hero-content p {
-    font-family: 'Playfair Display', serif;
+.weddings-hero-subtitle {
+    display: block;
 
-    font-size: 15px;
+    font-size: 30px;
+
+    line-height: 1.2;
+}
+
+.weddings-hero-content p {
+    font-family: var(--font-display);
+
+    font-size: 22px;
 
     font-weight: 400;
 
-    line-height: 24px;
+    line-height: 1.35;
 
     font-style: italic;
 
@@ -1112,6 +1141,8 @@ footer {
     grid-template-columns: repeat(2, 1fr);
 
     align-items: stretch;
+
+    min-height: 680px;
 }
 
 /* IMAGE CARD */
@@ -1127,7 +1158,7 @@ footer {
     height: 100%;
     min-height: 0;
 
-    object-fit: contain;
+    object-fit: cover;
     object-position: center center;
 
     display: block;
@@ -1161,7 +1192,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .ceremony-row:nth-child(3) .ceremony-text-card {
@@ -1176,9 +1207,9 @@ footer {
 .ceremony-text-card p {
     font-family: 'Playfair Display', serif;
 
-    font-size: 13px;
+    font-size: 14px;
 
-    line-height: 22px;
+    line-height: 24px;
 
     font-weight: 400;
 
@@ -1188,9 +1219,9 @@ footer {
 }
 
 .ceremony-text-card p.ceremony-body {
-    font-size: 14px;
+    font-size: 15px;
 
-    line-height: 24px;
+    line-height: 26px;
 }
 
 .ceremony-text-card p strong {
@@ -1200,9 +1231,9 @@ footer {
 .ceremony-card-title {
     font-family: 'Playfair Display', serif;
 
-    font-size: 22px;
+    font-size: 24px;
 
-    line-height: 31.02px;
+    line-height: 34px;
 
     font-weight: 400;
 
@@ -1233,8 +1264,8 @@ footer {
 
 .ceremony-includes-list li {
     font-family: 'Playfair Display', serif;
-    font-size: 13px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 24px;
     font-weight: 400;
     color: var(--color-text-medium);
     margin-bottom: 2px;
@@ -1268,6 +1299,12 @@ footer {
     margin-bottom: 18px;
 }
 
+.weddings-final-content .weddings-final-small {
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
 .weddings-final-content p:last-of-type {
     margin-bottom: 56px;
 }
@@ -1284,6 +1321,10 @@ footer {
 
     .weddings-hero-content h2 {
         font-size: 2.8rem;
+    }
+
+    .weddings-hero-subtitle {
+        font-size: 2rem;
     }
 
     .ceremony-image-overlay h3 {
@@ -1303,6 +1344,8 @@ footer {
 
     .ceremony-row {
         grid-template-columns: 1fr;
+
+        min-height: auto;
     }
 
     .ceremony-image-card img {
@@ -1325,8 +1368,12 @@ footer {
         font-size: 4rem;
     }
 
+    .weddings-hero-subtitle {
+        font-size: 2.6rem;
+    }
+
     .weddings-hero-content p {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -1342,8 +1389,12 @@ footer {
         font-size: 2.8rem;
     }
 
+    .weddings-hero-subtitle {
+        font-size: 2rem;
+    }
+
     .weddings-hero-content p {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     .ceremony-image-overlay h3 {
