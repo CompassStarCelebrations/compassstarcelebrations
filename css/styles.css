@@ -415,8 +415,8 @@ nav a:hover {
 
 .hero-right {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    justify-content: stretch;
 }
 
 .hero-content {
@@ -2442,15 +2442,12 @@ footer {
 /* CONTENT */
 
 .faq-content {
-    max-width: 600px;
+    max-width: 700px;
     text-align: left;
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: block;
     box-sizing: border-box;
-    padding: 48px 60px;
+    padding: 32px 36px;
 }
 
 .faq-content h3 {
@@ -2463,10 +2460,10 @@ footer {
 }
 
 .faq-content p {
-    font-size: 1.15rem;
-    line-height: 1.7;
+    font-size: 1rem;
+    line-height: 1.5;
     color: white;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
     word-break: break-word;
 }
 
@@ -2479,9 +2476,9 @@ footer {
 }
 
 .faq-content li {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    margin-bottom: 8px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 6px;
 }
 
 /* LINK */
