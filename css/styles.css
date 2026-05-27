@@ -140,27 +140,40 @@ header {
     color: var(--color-text);
 }
 
+.brand-link {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.brand-link:hover,
+.brand-link:focus-visible {
+    opacity: 0.92;
+}
+
 /* =========================
    BUTTON
 ========================= */
 
-.contact-btn {
+a.contact-btn {
     background: var(--color-brand);
 
     color: white;
 
+    font-family: var(--font-display);
+
     text-decoration: none;
 
-    padding: 20px 46px;
+    padding: 22px 52px;
 
-    font-size: 1rem;
+    font-size: 1.1rem;
 
     font-weight: 600;
 
     transition: 0.3s;
 }
 
-.contact-btn:hover {
+a.contact-btn:hover {
     opacity: 0.9;
 }
 
@@ -340,7 +353,7 @@ nav a:hover {
 
     grid-template-columns: 50% 50%;
 
-    align-items: start;
+    align-items: stretch;
 
     min-height: 820px;
 
@@ -353,7 +366,7 @@ nav a:hover {
 
 .hero-left {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .hero-image {
@@ -389,7 +402,7 @@ nav a:hover {
 
     line-height: 90px;
 
-    font-weight: 400;
+    font-weight: 700;
 
     color: var(--color-brand);
 
@@ -452,6 +465,8 @@ nav a:hover {
     display: grid;
 
     grid-template-columns: 1fr 1fr;
+
+    height: 840px;
 }
 
 .reverse {
@@ -491,15 +506,21 @@ nav a:hover {
 
     color: white;
 
-    margin-bottom: 40px;
+    margin: 0 0 40px;
 }
 
 .split-text p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+
+    font-family: var(--font-display);
 
     line-height: 2;
 
-    margin-bottom: 24px;
+    margin: 0 0 24px;
+}
+
+.split-text p:last-child {
+    margin-bottom: 0;
 }
 
 /* =========================
@@ -517,7 +538,9 @@ nav a:hover {
 }
 
 .final-content p {
-    font-size: 1.05rem;
+    font-size: 1.3rem;
+
+    font-family: var(--font-display);
 
     font-weight: 600;
 
@@ -530,14 +553,14 @@ nav a:hover {
 
 /* BUTTON */
 
-.final-section .contact-btn {
+.final-section a.contact-btn {
     display: inline-block;
 
     margin-top: 45px;
 
-    padding: 18px 40px;
+    padding: 20px 46px;
 
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
 /* =========================
@@ -878,6 +901,8 @@ footer {
 
     .split-section {
         grid-template-columns: 1fr;
+
+        height: auto;
     }
 
     .split-text {
@@ -928,7 +953,7 @@ footer {
         font-size: 1rem;
     }
 
-    .contact-btn {
+    a.contact-btn {
         padding: 16px 30px;
     }
 
