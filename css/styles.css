@@ -138,12 +138,12 @@ header {
    TOP HEADER
 ========================= */
 
+
 .top-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-
     padding: 30px 0 24px;
+    gap: 18px;
 }
 
 /* =========================
@@ -2247,11 +2247,12 @@ footer {
     align-items: stretch;
 }
 
+
 .humanist-left {
-    width: auto;
-    max-width: none;
-    margin: 0;
-    padding: 0 26px 0 clamp(86px, 10vw, 150px);
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 0 18px 0 32px;
 }
 
 .humanist-right {
@@ -2290,14 +2291,14 @@ footer {
         object-position: center;
     }
 
-    .fact-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
-        margin-bottom: 38px;
+    .fact-item p {
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        line-height: 1.45;
+        color: var(--color-text);
+        max-width: 800px;
+        margin-bottom: 14px;
     }
-    display: block;
-    object-fit: cover;
     object-position: center;
 }
 
@@ -2459,18 +2460,15 @@ footer {
 
     align-items: center;
 
-
-
-
-            padding: 48px 40px;
-}
-
-.faq-grid-section > .faq-text-box:nth-child(3) {
-    justify-content: center;
     padding: 48px 40px;
-}
+    }
 
-/* CONTENT */
+    .faq-grid-section > .faq-text-box:nth-child(3) {
+        justify-content: center;
+        padding: 48px 40px;
+    }
+
+    /* CONTENT */
 
 .faq-content {
     max-width: 700px;
@@ -2534,6 +2532,10 @@ footer {
    FAQ RESPONSIVE
 ======================================== */
 
+
+
+
+
 @media(max-width: 900px) {
 
     .faq-grid-section {
@@ -2548,6 +2550,15 @@ footer {
     .faq-text-box {
         padding: 60px 35px;
     }
+
+
+
+
+
+
+
+
+
 
     .faq-title-section h2 {
         font-size: 3rem;
