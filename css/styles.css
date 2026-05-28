@@ -213,6 +213,11 @@ button.contact-btn,
     display: inline-block;
 }
 
+/* Make the Submit button text larger on the contact page */
+button.submit-btn {
+    font-size: 2.5rem;
+}
+
 a.contact-btn:hover,
 button.contact-btn:hover,
 .contact-btn:hover {
@@ -2427,7 +2432,7 @@ footer {
 
 .faq-grid-section > :nth-child(1),
 .faq-grid-section > :nth-child(2) {
-    height: 700px;
+    height: 780px;
 }
 
 /* IMAGES */
@@ -2454,12 +2459,15 @@ footer {
 
     align-items: center;
 
-    padding: 24px 40px;
+
+
+
+            padding: 48px 40px;
 }
 
 .faq-grid-section > .faq-text-box:nth-child(3) {
     justify-content: center;
-    padding: 24px 40px;
+    padding: 48px 40px;
 }
 
 /* CONTENT */
@@ -2471,7 +2479,7 @@ footer {
     display: block;
     box-sizing: border-box;
     padding: 32px 36px;
-}
+    }
 
 .faq-content h3 {
     font-size: 20px;
