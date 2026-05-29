@@ -2379,47 +2379,68 @@ footer {
 }
 
 /* =========================
-   MOBILE: overlay header + hide on scroll
-   Header will overlay page content and slide away on scroll down
+   MOBILE: overlay button + hide header on scroll
 ========================= */
 
 @media (max-width: 900px) {
 
+    body {
+        padding-top: 240px;
+    }
+
     header {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        background: transparent;
+        width: 100%;
+        background: rgba(255,255,255,0.98);
         z-index: 9999;
         transition: transform 0.28s ease;
         will-change: transform;
     }
 
     .top-header {
-        padding: 12px 0 8px;
+        position: relative;
+        padding: 12px 0 10px;
     }
 
-    /* make the Get In Touch button sit over the hero image */
     .top-header .contact-btn {
+        display: inline-block;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: 110px;
-        padding: 12px 28px;
-        font-size: 1.15rem;
+        top: calc(100% + 8px);
+        padding: 12px 26px;
+        font-size: 1.1rem;
         border-radius: 6px;
         box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        z-index: 10001;
     }
 
-    /* when hidden, slide header up */
-    header.header-hidden {
-        transform: translateY(-130%);
-    }
-
-    /* ensure nav sits below header overlay */
     .nav-container {
         margin-top: 0;
+        position: relative;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: rgba(255,255,255,0.98);
+        display: none;
+        z-index: 10000;
+        padding: 25px 0;
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    header.header-hidden {
+        transform: translateY(-100%);
     }
 
 }
