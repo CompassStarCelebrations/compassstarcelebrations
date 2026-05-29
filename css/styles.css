@@ -2378,6 +2378,52 @@ footer {
 
 }
 
+/* =========================
+   MOBILE: overlay header + hide on scroll
+   Header will overlay page content and slide away on scroll down
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: transparent;
+        z-index: 9999;
+        transition: transform 0.28s ease;
+        will-change: transform;
+    }
+
+    .top-header {
+        padding: 12px 0 8px;
+    }
+
+    /* make the Get In Touch button sit over the hero image */
+    .top-header .contact-btn {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 110px;
+        padding: 12px 28px;
+        font-size: 1.15rem;
+        border-radius: 6px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+
+    /* when hidden, slide header up */
+    header.header-hidden {
+        transform: translateY(-130%);
+    }
+
+    /* ensure nav sits below header overlay */
+    .nav-container {
+        margin-top: 0;
+    }
+
+}
+
 /* ========================================
    FAQ PAGE
 ======================================== */
