@@ -211,8 +211,8 @@ button.contact-btn,
     color: white;
     font-family: var(--font-display);
     text-decoration: none;
-    padding: 22px 52px;
-    font-size: 2rem;
+    padding: 16px 40px;
+    font-size: 1.75rem;
     font-weight: 600;
     border: none;
     border-radius: 4px;
