@@ -22,11 +22,11 @@
 }
 /* Testimonials Title Style (matches home page) */
 .testimonials-title {
-    /* Match weddings hero h2 sizing and weight for visual parity */
+    /* Larger hero-style title for testimonials */
     font-family: var(--font-display);
-    font-size: 46px;
-    line-height: 62px;
-    font-weight: 400;
+    font-size: 5.5rem;
+    line-height: 1;
+    font-weight: 600;
     color: #fff; /* hero overlay uses white */
     text-align: center;
     margin: 0 0 18px 0;
@@ -1802,31 +1802,22 @@ footer {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3rem;
-    font-weight: 600;
-    color: #ffffff;
-    z-index: 2;
-    text-shadow: 0 3px 14px rgba(0, 0, 0, 0.28);
-    max-width: 90%;
-    margin: 0;
-    line-height: 1;
-}
-
-/* MAIN SECTION */
+        font-size: 5.5rem;
+        font-weight: 600;
+        color: #ffffff;
+        z-index: 2;
+        text-shadow: 0 3px 14px rgba(0, 0, 0, 0.28);
+        max-width: 90%;
+        margin: 0;
+        line-height: 62px;
+    }
 
 .testimonial-section {
-    position: relative;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     max-width: 1600px;
-
     margin: 70px auto 26px;
-
     padding: 0 74px;
 }
 
