@@ -241,7 +241,7 @@
                 Let's Start Planning!
             </h2>
 
-            <form class="contact-form">
+            <form class="contact-form" method="POST" action="https://formspree.io/f/mjgdvebb">
 
                 <!-- NAME -->
 
@@ -253,7 +253,9 @@
 
                     <input
                         type="text"
-                        placeholder="Enter your first and last name">
+                        name="name"
+                        placeholder="Enter your first and last name"
+                        required>
 
                 </div>
 
@@ -266,7 +268,9 @@
                     </label>
 
                     <input
-                        type="email">
+                        type="email"
+                        name="email"
+                        required>
 
                 </div>
 
@@ -279,7 +283,9 @@
                     </label>
 
                     <input
-                        type="tel">
+                        type="tel"
+                        name="phone"
+                        required>
 
                 </div>
 
@@ -294,32 +300,32 @@
                     <div class="checkbox-group">
 
                         <label>
-                            <input type="checkbox">
+                            <input type="checkbox" name="celebration_type" value="Wedding">
                             Wedding
                         </label>
 
                         <label>
-                            <input type="checkbox">
+                            <input type="checkbox" name="celebration_type" value="Elopement">
                             Elopement
                         </label>
 
                         <label>
-                            <input type="checkbox">
+                            <input type="checkbox" name="celebration_type" value="Vow Renewal">
                             Vow Renewal
                         </label>
 
                         <label>
-                            <input type="checkbox">
+                            <input type="checkbox" name="celebration_type" value="Baby Naming">
                             Baby Naming
                         </label>
 
                         <label>
-                            <input type="checkbox">
+                            <input type="checkbox" name="celebration_type" value="Child & Adoption Welcoming">
                             Child & Adoption Welcoming
                         </label>
 
                         <label>
-                            <input type="checkbox">
+                            <input type="checkbox" name="celebration_type" value="Other">
                             Other (add more detail in Message box)
                         </label>
 
@@ -336,7 +342,8 @@
                     </label>
 
                     <input
-                        type="date">
+                        type="date"
+                        name="celebration_date">
 
                 </div>
 
@@ -349,7 +356,8 @@
                     </label>
 
                     <input
-                        type="text">
+                        type="text"
+                        name="location">
 
                 </div>
 
@@ -361,7 +369,7 @@
                         How did you hear about me?
                     </label>
 
-                    <select>
+                    <select name="how_heard">
 
                         <option>
                             Choose an option
@@ -403,7 +411,7 @@
                         Message
                     </label>
 
-                    <textarea rows="7"></textarea>
+                    <textarea rows="7" name="message"></textarea>
 
                 </div>
 
